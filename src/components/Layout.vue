@@ -22,7 +22,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: red;
   margin-top: 60px;
 }
 .content {
@@ -34,6 +34,11 @@
 .box {
   padding-left: 50px;
   padding-right: 50px;
+  color: white
+}
+
+h1 {
+  color: white;
 }
 
 </style>
