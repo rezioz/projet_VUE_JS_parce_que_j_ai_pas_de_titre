@@ -16,5 +16,13 @@ import Layout from './components/Layout.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  
+}
+
+body{
+  background-image: url('./images/back.png');
+  width:100%;
+  height:100%;
+  overflow-x: hidden;
 }
 </style>
