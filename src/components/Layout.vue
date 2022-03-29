@@ -3,12 +3,12 @@
 
 <template>
   <div>
-    <h1>Rick & MORTY SHOW</h1>
+    <img src="../../images/logo.gif"/>
     <div class="test">
         <nav class="content">
           <RouterLink to="/" class="box">Episode</RouterLink>
-          <RouterLink to="/profile" class="box">Perosnnage</RouterLink>
-          <RouterLink to="/profile" class="box">un autre truc jsp quoi</RouterLink>
+          <RouterLink to="/personnage" class="box">Perosnnage</RouterLink>
+          <RouterLink to="/other" class="box">un autre truc jsp quoi</RouterLink>
           
         </nav>
         <RouterView />
