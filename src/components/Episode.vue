@@ -29,7 +29,17 @@ export default defineComponent({
 </script>
 
 <template>
+
+  
+
+
   <div style="background-color:white;">
+
+    <div class="search-wrapper panel-heading col-sm-12">
+      <input type="text" v-model="search" placeholder="Search" /> <br> <br>
+    </div>
+
+
     <div
       v-for="episode in episodes"
       v-bind:key="episode['id']"
@@ -45,7 +55,12 @@ export default defineComponent({
     </div>
     </div>
   </div>
+
+  
+
 </template>
+
+
 
 <style>
 </style>
