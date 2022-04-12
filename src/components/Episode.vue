@@ -6,18 +6,11 @@ export default defineComponent({
   data() {
     return {
       episodes: [],
-      searchbar: 'Pilot'
+      searchbar: ''
     };
   },
 
-
-  methods: {
-    changeClass: function(){
-      this.width='10000px';
-    }
-  },
-
-  mounted() {
+  async mounted() {
     const numbers = [1, 2, 3];
     numbers.forEach(async (number) => {
       try {
@@ -29,7 +22,6 @@ export default defineComponent({
     });
   },
 });
-
 </script>
 
 <template>
@@ -50,19 +42,10 @@ export default defineComponent({
           <br/>
           <br/>
         </div>
-        <div v-else >
-          
-        </div>
       </div>
-
-      
-
-
     </div>
   </div>
 </template>
-
-
 
 <style>
 .grid {
@@ -84,13 +67,6 @@ export default defineComponent({
 }
 
 .hiddencard {
-  flex: 0 0 31%;
-  border: 1px solid black;
-  width: 300px;
-  height: 150px;
-  padding-top: 25px;
-  margin: 10px 10px 10px 10px;
-  background-color: red;
   display: none;
 }
 
