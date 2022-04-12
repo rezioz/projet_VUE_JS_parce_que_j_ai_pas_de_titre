@@ -40,8 +40,8 @@ export default defineComponent({
     </div>
 
       <div class="grid" v-for="episode in episodes" v-bind:key="episode['id']">
-        <div class="card" v-for="detailEpisode in episode" :key="detailEpisode['idd']" :class="detailEpisode.name === searchbar ? 'card' : 'hiddencard'" >
-        <div v-if="detailEpisode.name==searchbar">
+        <div class="card" v-for="detailEpisode in episode" :key="detailEpisode['idd']" :class=" detailEpisode.name.toLowerCase().includes(searchbar.toLowerCase()) ? 'card' : 'hiddencard'" >
+        <div v-if="detailEpisode.name.toLowerCase().includes(searchbar.toLowerCase())">
       
           <div > {{ detailEpisode.episode }} </div><br/>
           <div> {{ detailEpisode.name }} </div>
