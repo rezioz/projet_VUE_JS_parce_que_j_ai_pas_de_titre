@@ -2,7 +2,6 @@
 import { defineComponent } from "vue";
 import axios from "axios";
 
-
 export default defineComponent({
   data() {
     return {
@@ -20,17 +19,13 @@ export default defineComponent({
 
   mounted() {
     const numbers = [1, 2, 3];
-
-    numbers.forEach((number) => {
-      axios
-        .get("https://rickandmortyapi.com/api/episode?page=" + number)
-        .then((result) => {
-          console.log(result)
-          this.episodes.push(result.data.results);
-        })
-        .catch((error) => {
-          console.log("Error");
-        });
+    numbers.forEach(async (number) => {
+      try {
+        let result = await axios.get("https://rickandmortyapi.com/api/episode?page=" + number)
+        this.episodes.push(result.data.results)
+      } catch(error) {
+        console.log(error);
+      }
     });
   },
 });
