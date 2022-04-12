@@ -40,7 +40,7 @@ export default defineComponent({
     </div>
 
       <div class="grid" v-for="episode in episodes" v-bind:key="episode['id']">
-        <div class="card" v-for="detailEpisode in episode" v-bind:key="detailEpisode['idd']">
+        <div class="card" v-for="detailEpisode in episode" :key="detailEpisode['idd']" :class="detailEpisode.name === searchbar ? 'card' : 'hiddencard'" >
         <div v-if="detailEpisode.name==searchbar">
       
           <div > {{ detailEpisode.episode }} </div><br/>
@@ -50,9 +50,8 @@ export default defineComponent({
           <br/>
           <br/>
         </div>
-        <div v-else>
-          <div class="hiddencard"> ---> jsp </div>
-          detailEpisode.changeClass();
+        <div v-else >
+          
         </div>
       </div>
 
@@ -92,6 +91,7 @@ export default defineComponent({
   padding-top: 25px;
   margin: 10px 10px 10px 10px;
   background-color: red;
+  display: none;
 }
 
 .cardinfo {
