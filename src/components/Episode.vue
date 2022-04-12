@@ -7,6 +7,7 @@ export default defineComponent({
   data() {
     return {
       episodes: [],
+      searchbar: 'Pilot'
     };
   },
   mounted() {
@@ -35,21 +36,27 @@ export default defineComponent({
 
   <div style="background-color:white;">
 
-    <div class="search-wrapper panel-heading col-sm-12">
-      <input type="text" v-model="search" placeholder="Search" /> <br> <br>
+    <div class="search-wrapper panel-heading col-sm-12" :directive="searchbar">
+      <input index="searchbar" type="text" v-model="searchbar" placeholder="Search" /> <br> <br>
     </div>
 
 
+
+    
     <div
       v-for="episode in episodes"
       v-bind:key="episode['id']"
     >
-      <div
+    <div
       v-for="detailEpisode in episode"
       v-bind:key="detailEpisode['idd']"
     >
+    <div v-if="detailEpisode.name==searchbar">
       Episode : {{ detailEpisode.episode }}
       Nom : {{ detailEpisode.name }}
+    </div>
+    
+      
     <br/>
     <br/>
     </div>
