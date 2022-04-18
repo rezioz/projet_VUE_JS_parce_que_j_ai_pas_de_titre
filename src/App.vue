@@ -3,6 +3,9 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import Layout from './components/Layout.vue'
 import Episode from './components/Episode.vue'
+import Personnage from './components/Personnage.vue'
+import PersonnageDetails from './components/PersonnageDetails.vue'
+
 </script>
 
 <template>
@@ -19,7 +22,6 @@ import Episode from './components/Episode.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  
 }
 
 body{

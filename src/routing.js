@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 // Ici, on importe les composants qu'on veut configurer
 // Dans ce cas, ce sera Accueil et Details
 import Episode from "./components/Episode.vue";
-import Personnage from "./components/Personnage.vue";
+import Personnage from "./components/PersonnageDetails.vue";
+import PersonnageDetails from "./components/Personnage.vue";
 import Other from "./components/Other.vue";
 
 // Nous créons d'abord nos Routes
@@ -20,6 +21,10 @@ const routes = [
   {
     path: "/personnage",
     component: Personnage,
+  },
+  {
+    path: "/personnage/:id",
+    component: PersonnageDetails,
   },
   {
     path: "/other",
