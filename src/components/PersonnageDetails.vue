@@ -17,15 +17,12 @@ export default defineComponent({
   },
 
   async mounted() {
-    const numbers = [1, 2, 3]
-    numbers.forEach(async (number) => {
-      try {
-        let resultChar = await axios.get("https://rickandmortyapi.com/api/character/" + number)
-        this.infocharacters.push(resultChar.data)
-      } catch(error) {
-        console.log(error)
-      }
-    });
+    try {
+      let resultChar = await axios.get("https://rickandmortyapi.com/api/character/" + this.$route.params.id)
+      this.infocharacters.push(resultChar.data)
+    } catch(error) {
+    console.log(error)
+   }
   },
 });
 </script>
@@ -35,11 +32,12 @@ export default defineComponent({
     <div v-if="id">
         <div v-for="character in infocharacters" v-bind:key="character.id"> 
             <div v-if="id == character.id">
-                <img :src=character.image>
+
+                <img class="imageStyle" :src=character.image>
                 <div>{{character.name}}</div>
-                <div>{{character.status}}</div>
+                <div>Statut : {{character.status}}</div>
                 <div>{{character.species}}</div>
-                <div>{{character.location.name}}</div>
+                <div>From ? {{character.location.name}}</div>
             </div>
         </div>
     </div>
@@ -47,32 +45,3 @@ export default defineComponent({
     
   </div>
 </template>
-
-<style>
-.grid {
-  margin: 0px 10% 0px 10%;
-	display: flex;
-	flex-wrap: wrap;
-  width: auto;
-  text-align: center;
-}
-
-.card {
-  flex: 0 0 31%;
-  border: 1px solid black;
-  width: 300px;
-  height: auto;
-  padding-top: 25px;
-  margin: 10px 10px 10px 10px;
-  background-color: azure;
-}
-
-.hiddencard {
-  display: none;
-}
-
-.cardinfo {
-  margin-top: 13%;
-}
-
-</style>
