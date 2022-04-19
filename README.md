@@ -1,7 +1,16 @@
-# Vue 3 + Vite
+# To launch project
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+clone git repository and then run : 
+npm run dev in your bash
 
-## Recommended IDE Setup
+## Project explainations
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+Le project a pour but d'afficher des informations à propos de la série Rick et Morty.
+
+Le site dispose de 2 pages principale, En local :
+
+http://localhost:3000/ correspond à la page des épisodes, c'est la page par défaut
+
+http://localhost:3000/personnage correspond à l'ensemble des personnages
+
+http://localhost:3000/personnage/{id d'un personnage} info d'un personnage en particulier
