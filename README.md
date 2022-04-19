@@ -1,3 +1,8 @@
+# Collaborators :
+
+Rezioz : Nicolas
+Hyrkules : Helouri
+
 # To launch project
 
 clone git repository and then run : 
