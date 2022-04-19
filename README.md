@@ -1,11 +1,11 @@
 # Collaborators :
 
-Rezioz : Nicolas
-Hyrkules : Helouri
+Rezioz : Nicolas  
+Hyrkules : Helouri  
 
 # To launch project
 
-clone git repository and then run : 
+clone git repository and then run :  
 npm run dev in your bash
 
 ## Project explainations
