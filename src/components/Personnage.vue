@@ -31,7 +31,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div style="background-color:white">
+  <div style="">
     <!-- Pour chaque personnage, on affiche certaines de ses infos dans un grid -->
     <div class="gridchar">
       <div class="cardchar" v-for="character in infocharacters" v-bind:key="character.id"> 
