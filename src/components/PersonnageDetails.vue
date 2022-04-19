@@ -17,6 +17,7 @@ export default defineComponent({
   },
 
   async mounted() {
+    // Le fetch est un peu différent que sur les autres pages, on récupère l'id en paramètre de la page, pour fetcher uniquement les infos du personnage concerné
     try {
       let resultChar = await axios.get("https://rickandmortyapi.com/api/character/" + this.$route.params.id)
       this.infocharacters.push(resultChar.data)
@@ -29,10 +30,10 @@ export default defineComponent({
 
 <template>
   <div style="background-color:white">
-    <div v-if="id">
+    <div>
+      <!-- Affichage des infos sur le personnage de la page -->
         <div v-for="character in infocharacters" v-bind:key="character.id"> 
-            <div v-if="id == character.id">
-
+            <div>
                 <img class="imageStyle" :src=character.image>
                 <div>{{character.name}}</div>
                 <div>Statut : {{character.status}}</div>
@@ -41,7 +42,6 @@ export default defineComponent({
             </div>
         </div>
     </div>
-    <div v-else>haha</div>
     
   </div>
 </template>

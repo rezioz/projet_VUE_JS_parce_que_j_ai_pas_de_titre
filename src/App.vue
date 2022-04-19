@@ -2,18 +2,17 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import Layout from './components/Layout.vue'
-import Episode from './components/Episode.vue'
-import Personnage from './components/Personnage.vue'
-import PersonnageDetails from './components/PersonnageDetails.vue'
 
 </script>
 
 <template>
   <div>
+    <!-- Le layout sera présent sur tout le site -->
     <Layout/>
   </div>
 </template>
 
+<!-- On a décidé de mettre le css ici, car étant global il est plus simple de le recentre sur une seule page -->
 <style>
 
 #app {

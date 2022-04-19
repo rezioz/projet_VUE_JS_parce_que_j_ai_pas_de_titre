@@ -17,7 +17,8 @@ export default defineComponent({
   },
 
   async mounted() {
-    const charMax = 826
+    //On boucle sur tous les personnages pour récupérer leurs infos, qu'on stocke dans une list
+    const charMax = 300
     let charNumber = 1
     while(charNumber < charMax){
       try {
@@ -34,6 +35,7 @@ export default defineComponent({
 
 <template>
   <div style="background-color:white">
+    <!-- Pour chaque personnage, on affiche certaines de ses infos dans un grid -->
       <div class="gridchar">
         <div class="cardchar" v-for="character in infocharacters" v-bind:key="character.id"> 
             <div class="" ><img :src=character.image></div>

@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-// On importe notre router du fichier qu'on a créé avant
+// On importe notre router
 import router from './routing';
 //import store from './store' // short for @/store/index
 
