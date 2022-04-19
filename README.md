@@ -7,7 +7,7 @@ npm run dev in your bash
 
 Le project a pour but d'afficher des informations à propos de la série Rick et Morty.
 
-Le site dispose de 2 pages principale, En local :
+Les différentes pages de site, en local :
 
 http://localhost:3000/ correspond à la page des épisodes, c'est la page par défaut
 
