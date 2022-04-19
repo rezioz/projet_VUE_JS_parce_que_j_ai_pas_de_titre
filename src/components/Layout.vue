@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <template>
   <div>
     <img src="../../images/logo.gif"/>

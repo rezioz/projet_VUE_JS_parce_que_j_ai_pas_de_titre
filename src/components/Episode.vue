@@ -2,9 +2,6 @@
 import { defineComponent } from "vue";
 import axios from "axios";
 
-//const app = createApp({ "./App.vue" })
-//app.use(store)
-
 export default defineComponent({
 
   data() {
@@ -12,7 +9,7 @@ export default defineComponent({
       episodes: [],
       infocharacters: [],
       searchbar: '',
-      upHere : false,
+      hover : false,
     };
   },
   //au montage de la page, on réalise le fetch d'api
@@ -57,14 +54,14 @@ export default defineComponent({
       De plus il y a un hover -->
       <div v-for="detailEpisode in episode" :key="detailEpisode.id"
         :class=" detailEpisode.name.toLowerCase().includes(searchbar.toLowerCase()) ? 'card' : 'hiddencard'"
-        @mouseover="upHere = true" @mouseleave="upHere = false">
+        @mouseover="hover = true" @mouseleave="hover = false">
         <div > {{ detailEpisode.episode }} </div>
         <br/>
         <div> {{ detailEpisode.name }}</div>
         <div class="cardinfo"> Over me :)
           <!-- Lors du hover, on souhaite affiche le nom des 5 premiers personnages présent dans l'épisode. 
           Pour cela il faut comparer les personnages et avec ceux de l'épisode -->
-          <div v-show="upHere" v-for="chars in detailEpisode.characters.slice(0, 5)" v-bind:key="chars['iddd']">
+          <div v-show="hover" v-for="chars in detailEpisode.characters.slice(0, 5)" v-bind:key="chars['iddd']">
             <div v-for="character in infocharacters" v-bind:key="character.id">
               <div v-if="chars == character.url"> 
                 <!-- utilisation d'un a car avec routerlink, je n'ai pas trouvé de solution pour faire un liens avec une variable. 

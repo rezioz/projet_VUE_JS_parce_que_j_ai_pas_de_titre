@@ -8,10 +8,7 @@ export default defineComponent({
 
   data() {
     return {
-      episodes: [],
       infocharacters: [],
-      searchbar: '',
-      upHere : false,
       id: this.$route.params.id,
     };
   },
