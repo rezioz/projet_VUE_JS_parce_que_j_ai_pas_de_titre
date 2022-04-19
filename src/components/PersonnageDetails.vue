@@ -26,17 +26,15 @@ export default defineComponent({
 </script>
 
 <template>
-  <div style="background-color:white">
-    <div>
-      <!-- Affichage des infos sur le personnage de la page -->
-      <div v-for="character in infocharacters" v-bind:key="character.id"> 
-        <div>
-          <img class="imageStyle" :src=character.image>
-          <div>{{character.name}}</div>
-          <div>Statut : {{character.status}}</div>
-          <div>{{character.species}}</div>
-          <div>From ? {{character.location.name}}</div>
-        </div>
+  <div>
+    <!-- Affichage des infos sur le personnage de la page -->
+    <div v-for="character in infocharacters" v-bind:key="character.id"> 
+      <div>
+        <img class="imageStyle" :src=character.image>
+        <div>{{character.name}}</div>
+        <div>Statut : {{character.status}}</div>
+        <div>{{character.species}}</div>
+        <div>From ? {{character.location.name}}</div>
       </div>
     </div>
   </div>
