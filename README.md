@@ -19,3 +19,5 @@ http://localhost:3000/ correspond à la page des épisodes, c'est la page par d�
 http://localhost:3000/personnage correspond à l'ensemble des personnages
 
 http://localhost:3000/personnage/{id d'un personnage} info d'un personnage en particulier
+
+Clique sur le nom des personnage renvoie vers le detail du perosnnage en particulier.
